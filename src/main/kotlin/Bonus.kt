@@ -8,18 +8,17 @@ fun main() {
         numbers[i] = sc.nextLine().toInt()
     }
 
-    var counter = 1
     for (i in 0 until size) {
+        var counter = 1
         for (j in i + 1 until size) {
             if (numbers[i] == numbers[j]) {
                 if (counter == 1 && numbers[j] != 0) {
-                    print(numbers[i])
+                    print("${numbers[i]} ")
                 }
                 numbers[j] = 0
                 counter++
             }
         }
-        counter = 1
     }
 }
 
